@@ -105,6 +105,7 @@ define clean
 	@rm -rf $(ROOT_DIR)/source
 	@rm -rf $(ROOT_DIR)/binaries
 	@rm -rf $(ROOT_DIR)/data
+	@rm -rf $(ROOT_DIR)/*.log
 endef
 
 # ------------------------------------------------------------------------------

@@ -12,10 +12,7 @@
                     "--wasm-execution=compiled",
                     "--execution=wasm",
                     "--no-beefy",
-                    "--rpc-external",
                     "--ws-external",
-                    "--rpc-cors all",
-                    "--rpc-methods=Unsafe",
                     "--log='main,info'"
                 ]
 			},
@@ -28,10 +25,7 @@
                     "--wasm-execution=compiled",
                     "--execution=wasm",
                     "--no-beefy",
-                    "--rpc-external",
                     "--ws-external",
-                    "--rpc-cors all",
-                    "--rpc-methods=Unsafe",
                     "--log='main,info'"
                 ]
 			},
@@ -44,10 +38,7 @@
                     "--wasm-execution=compiled",
                     "--execution=wasm",
                     "--no-beefy",
-                    "--rpc-external",
                     "--ws-external",
-                    "--rpc-cors all",
-                    "--rpc-methods=Unsafe",
                     "--log='main,info'"
                 ]
 			},
@@ -60,31 +51,17 @@
                     "--wasm-execution=compiled",
                     "--execution=wasm",
                     "--no-beefy",
-                    "--rpc-external",
                     "--ws-external",
-                    "--rpc-cors all",
-                    "--rpc-methods=Unsafe",
                     "--log='main,info'"
                 ]
 			}
-		],
-		"genesis": {
-			"runtime": {
-				"runtime_genesis_config": {
-					"configuration": {
-						"config": {
-							"validation_upgrade_frequency": 1,
-							"validation_upgrade_delay": 1
-						}
-					}
-				}
-			}
-		}
+		]
 	},
 	"parachains": [
 		{
 			"bin": "../binaries/centrifuge-chain",
-			"id": "2000",
+            "chain": "devel-local",
+			"id": "10001",
 			"balance": "1000000000000000000000",
 			"nodes": [
 				{
@@ -92,15 +69,10 @@
 					"port": 31200,
 					"name": "alice",
 					"flags": [
-                        "--force-authoring",
-                        "--", 
+                        "--",
                         "--execution=wasm",
                         "--wasm-execution=compiled",
                         "--no-beefy",
-                        "--rpc-cors all",
-                        "--rpc-external",
-                        "--rpc-methods=Unsafe",
-                        "--ws-external",
                         "--log='main,info'"
                     ]
 				}
@@ -109,7 +81,8 @@
 		},
 		{
 			"bin": "../binaries/centrifuge-chain",
-			"id": "3000",
+            "chain": "devel-local",
+			"id": "10001",
 			"balance": "1000000000000000000000",
 			"nodes": [
 				{
@@ -117,15 +90,10 @@
 					"port": 31300,
 					"name": "alice",
 					"flags": [
-                        "--force-authoring",
-                        "--", 
+                        "--",
                         "--execution=wasm",
                         "--wasm-execution=compiled",
                         "--no-beefy",
-                        "--rpc-cors all",
-                        "--rpc-external",
-                        "--rpc-methods=Unsafe",
-                        "--ws-external",
                         "--log='main,info'"
                     ]
 				}
