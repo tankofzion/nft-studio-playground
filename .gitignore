@@ -15,5 +15,8 @@ source/
 # Polkadot and Centrifuge binaries
 binaries/
 
+# Relay chain and parachain nodes data
+data/
+
 # Working notes
 /notes.txt

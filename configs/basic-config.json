@@ -6,22 +6,66 @@
 			{
 				"name": "alice",
 				"wsPort": 9944,
-				"port": 30444
+				"port": 30334,
+                "basePath": "../data/polkadot-relaychain",
+                "flags": [
+                    "--wasm-execution=compiled",
+                    "--execution=wasm",
+                    "--no-beefy",
+                    "--rpc-external",
+                    "--ws-external",
+                    "--rpc-cors all",
+                    "--rpc-methods=Unsafe",
+                    "--log='main,info'"
+                ]
 			},
 			{
 				"name": "bob",
-				"wsPort": 9955,
-				"port": 30555
+				"wsPort": 9945,
+				"port": 30335,
+                "basePath": "../data/polkadot-relaychain",
+                "flags": [
+                    "--wasm-execution=compiled",
+                    "--execution=wasm",
+                    "--no-beefy",
+                    "--rpc-external",
+                    "--ws-external",
+                    "--rpc-cors all",
+                    "--rpc-methods=Unsafe",
+                    "--log='main,info'"
+                ]
 			},
 			{
 				"name": "charlie",
-				"wsPort": 9966,
-				"port": 30666
+				"wsPort": 9946,
+				"port": 30336,
+                "basePath": "../data/polkadot-relaychain",
+                "flags": [
+                    "--wasm-execution=compiled",
+                    "--execution=wasm",
+                    "--no-beefy",
+                    "--rpc-external",
+                    "--ws-external",
+                    "--rpc-cors all",
+                    "--rpc-methods=Unsafe",
+                    "--log='main,info'"
+                ]
 			},
 			{
 				"name": "dave",
-				"wsPort": 9977,
-				"port": 30777
+				"wsPort": 9947,
+				"port": 30337,
+                "basePath": "../data/polkadot-relaychain",
+                "flags": [
+                    "--wasm-execution=compiled",
+                    "--execution=wasm",
+                    "--no-beefy",
+                    "--rpc-external",
+                    "--ws-external",
+                    "--rpc-cors all",
+                    "--rpc-methods=Unsafe",
+                    "--log='main,info'"
+                ]
 			}
 		],
 		"genesis": {
@@ -47,9 +91,21 @@
 					"wsPort": 9988,
 					"port": 31200,
 					"name": "alice",
-					"flags": ["--force-authoring", "--", "--execution=wasm"]
+					"flags": [
+                        "--force-authoring",
+                        "--", 
+                        "--execution=wasm",
+                        "--wasm-execution=compiled",
+                        "--no-beefy",
+                        "--rpc-cors all",
+                        "--rpc-external",
+                        "--rpc-methods=Unsafe",
+                        "--ws-external",
+                        "--log='main,info'"
+                    ]
 				}
-			]
+			],
+            "basePath": "../data/centrifuge-parachain"
 		},
 		{
 			"bin": "../binaries/centrifuge-chain",
@@ -60,9 +116,21 @@
 					"wsPort": 9999,
 					"port": 31300,
 					"name": "alice",
-					"flags": ["--force-authoring", "--", "--execution=wasm"]
+					"flags": [
+                        "--force-authoring",
+                        "--", 
+                        "--execution=wasm",
+                        "--wasm-execution=compiled",
+                        "--no-beefy",
+                        "--rpc-cors all",
+                        "--rpc-external",
+                        "--rpc-methods=Unsafe",
+                        "--ws-external",
+                        "--log='main,info'"
+                    ]
 				}
-			]
+			],
+            "basePath": "../data/centrifuge-parachain"
 		}
 	],
 	"types": {},
