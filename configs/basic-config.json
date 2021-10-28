@@ -62,7 +62,6 @@
 			"bin": "../binaries/centrifuge-chain",
             "chain": "devel-local",
 			"id": "10001",
-			"balance": "1000000000000000000000",
 			"nodes": [
 				{
 					"wsPort": 9988,
@@ -83,7 +82,6 @@
 			"bin": "../binaries/centrifuge-chain",
             "chain": "devel-local",
 			"id": "10001",
-			"balance": "1000000000000000000000",
 			"nodes": [
 				{
 					"wsPort": 9999,
